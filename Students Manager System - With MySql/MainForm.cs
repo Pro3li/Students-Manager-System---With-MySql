@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Students_Manager_System___With_MySql
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
