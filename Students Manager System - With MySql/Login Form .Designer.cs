@@ -47,7 +47,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cocon® Next Arabic", 38F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(162, 32);
+            this.label1.Location = new System.Drawing.Point(160, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(319, 68);
             this.label1.TabIndex = 0;
