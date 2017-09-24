@@ -59,5 +59,15 @@ namespace Students_Manager_System___With_MySql.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap App_Main_ico {
+            get {
+                object obj = ResourceManager.GetObject("App-Main-ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
