@@ -14,9 +14,11 @@ namespace Students_Manager_System___With_MySql
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+
         }
     }
 }

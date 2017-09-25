@@ -19,7 +19,29 @@ namespace Students_Manager_System___With_MySql
 
         private void Home_Load(object sender, EventArgs e)
         {
+            notifyIcon.ShowBalloonTip(12);
+        }
 
+
+        // when the form closed ..
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["MainForm"].Close();
+        }
+
+
+        // Close Button ..
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms["MainForm"].Close();
+        }
+
+
+        // Sing Out button ..  
+        private void btnSinOut_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms["MainForm"].Show();
+            Close();
         }
     }
 }

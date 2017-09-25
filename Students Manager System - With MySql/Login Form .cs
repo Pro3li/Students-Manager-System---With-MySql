@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 
 namespace Students_Manager_System___With_MySql
 {
@@ -21,8 +14,10 @@ namespace Students_Manager_System___With_MySql
         // MySql DataReader .. 
         MySqlDataAdapter _Adapter;
 
+
         // Table ..
         DataTable _Table = new DataTable();
+
 
         // Constractor .. 
         public MainForm()
@@ -67,6 +62,14 @@ namespace Students_Manager_System___With_MySql
                                      , MessageBoxButtons.OK
                                      , MessageBoxIcon.Information
                                     );
+                        
+                        // clear ..
+                        txtUserName.Clear();
+                        txtPassword.Clear();
+
+                        this.Hide();
+                        Home FRM_HOME = new Home();
+                        FRM_HOME.Show();
                     }
                     else
                     {
