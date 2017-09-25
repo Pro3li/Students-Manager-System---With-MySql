@@ -13,6 +13,11 @@ namespace Students_Manager_System___With_MySql
 {
     public partial class FRM_ADD_STUDENT : Form
     {
+
+        public string Choise = "Add";
+
+        public string Student_ID;
+
         public FRM_ADD_STUDENT()
         {
             InitializeComponent();
@@ -27,9 +32,17 @@ namespace Students_Manager_System___With_MySql
         // Add Button
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            string Query = ""; 
+
+            // check if this form is for add or Edit Student .. 
+            if ( Choise == "Add")
+                Query = "INSERT INTO tbl_student (Name,Addres,Date) VALUES (@Name,@Address,@Date)";
+            else if ( Choise == "Edit" )
+                Query = "UPDATE `tbl_student` SET `Name` = @Name, `Addres` = @Address, `Date` = @Date WHERE `tbl_student`.`ID` = " + Student_ID ;
+
             try
             {
-                tool.Command = new MySqlCommand("INSERT INTO tbl_student (Name,Addres,Date) VALUES (@Name,@Address,@Date)", tool.MySqlCon);
+                tool.Command = new MySqlCommand( Query , tool.MySqlCon);
                 MySqlParameter[] Parm = new MySqlParameter[3];
 
                 Parm[0] = new MySqlParameter("@Name", MySqlDbType.VarChar, 50);
@@ -46,8 +59,8 @@ namespace Students_Manager_System___With_MySql
 
                 tool.Command.ExecuteNonQuery();
 
-                MessageBox.Show(    "اضافة الطالب بنجاح"
-                                     , "تسجيل الدخول "
+                MessageBox.Show(    "تمت العملية بنجاح"
+                                     , "ادارة الطلاب"
                                      , MessageBoxButtons.OK
                                      , MessageBoxIcon.Information
                                 );
@@ -55,7 +68,7 @@ namespace Students_Manager_System___With_MySql
             catch ( Exception ex )
             {
                 MessageBox.Show(     ex.Message
-                                     , "اضافة طالب "
+                                     , "ادارة الطلاب"
                                      , MessageBoxButtons.OK
                                      , MessageBoxIcon.Warning
                             );

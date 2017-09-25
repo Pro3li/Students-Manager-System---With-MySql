@@ -205,16 +205,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dtBirthDate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtAddress;
+        public System.Windows.Forms.DateTimePicker dtBirthDate;
     }
 }

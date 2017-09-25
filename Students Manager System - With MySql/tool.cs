@@ -20,12 +20,24 @@ namespace Students_Manager_System___With_MySql
 
 
         // Table ..
-        static public DataTable Table = new DataTable();
+        static public DataTable Table;
 
 
         // MySql Command ..
         static public MySqlCommand Command;
 
+        // connect
+        public static void Connect()
+        {
+            if (MySqlCon.State == ConnectionState.Closed)
+                    MySqlCon.Open();
+        }
 
+        // disconnect
+        public static void DisConnect()
+        {
+            if (MySqlCon.State == ConnectionState.Open)
+                MySqlCon.Close();
+        }
     }
 }

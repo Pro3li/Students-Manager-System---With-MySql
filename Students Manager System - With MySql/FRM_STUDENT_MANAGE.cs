@@ -49,7 +49,7 @@ namespace Students_Manager_System___With_MySql
         // fill DGV ...
         void fillDGVStudent()
         {
-            tool.Adapter = new MySqlDataAdapter("SELECT Name,Addres,Date FROM tbl_student", tool.MySqlCon);
+            tool.Adapter = new MySqlDataAdapter("SELECT * FROM tbl_student", tool.MySqlCon);
             tool.Table = new DataTable();
             tool.Adapter.Fill(tool.Table);
             dgvStudent.DataSource = tool.Table;
@@ -60,10 +60,12 @@ namespace Students_Manager_System___With_MySql
         // ReName DGV Columns ...
         private void ReNameDGVcolums()
         {
-            dgvStudent.Columns[0].Width = 280;
-            dgvStudent.Columns[0].HeaderText = "اسم الطالب";
-            dgvStudent.Columns[1].HeaderText = "عنوان الطالب";
-            dgvStudent.Columns[2].HeaderText = "تاريخ الميلاد";
+            dgvStudent.Columns[0].Width = 80;
+            dgvStudent.Columns[1].Width = 230;
+            dgvStudent.Columns[0].HeaderText = "المعرف";
+            dgvStudent.Columns[1].HeaderText = "اسم الطالب";
+            dgvStudent.Columns[2].HeaderText = "عنوان الطالب";
+            dgvStudent.Columns[3].HeaderText = "تاريخ الميلاد";
         }
 
         // Search Function ...
@@ -85,7 +87,40 @@ namespace Students_Manager_System___With_MySql
         // Delete Student
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if (MessageBox.Show("هل انت متأكد من حذف الطالب : " + dgvStudent.CurrentRow.Cells[1].Value
+                                           , "حذف طالب"
+                                           , MessageBoxButtons.OK
+                                           , MessageBoxIcon.Information
+                                         )
+                          == DialogResult.OK
+                   )
+                {
+                    string Query = "DELETE FROM `tbl_student` WHERE `tbl_student`.`ID` = " + dgvStudent.CurrentRow.Cells[0].Value;
+                    tool.Command = new MySqlCommand(Query, tool.MySqlCon);
+                    tool.Connect();   // open
+                    tool.Command.ExecuteNonQuery();
+
+                    // Update
+                    fillDGVStudent();
+
+                }
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show(    ex.Message 
+                                  , "حذف طالب"
+                                  , MessageBoxButtons.OK
+                                  , MessageBoxIcon.Information
+                               );
+            }
+            finally
+            {
+                tool.DisConnect();  // close connection 
+            }
+
+                
         }
 
 
@@ -94,5 +129,24 @@ namespace Students_Manager_System___With_MySql
         {
             Serach();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            FRM_ADD_STUDENT FRM = new FRM_ADD_STUDENT();
+
+            // Edit some thing .. 
+            FRM.Choise = "Edit"; 
+            FRM.Student_ID = dgvStudent.CurrentRow.Cells[0].Value.ToString();
+            FRM.Text = "تعديل الطالب : " + dgvStudent.CurrentRow.Cells[1].Value.ToString();
+            FRM.txtName.Text = dgvStudent.CurrentRow.Cells[1].Value.ToString();
+            FRM.txtAddress.Text = dgvStudent.CurrentRow.Cells[2].Value.ToString();
+            FRM.dtBirthDate.Value = Convert.ToDateTime(dgvStudent.CurrentRow.Cells[3].Value.ToString());
+            FRM.btnAdd.Text = "تعديل";
+
+
+            FRM.ShowDialog();
+            fillDGVStudent();
+        }
+
     }
 }

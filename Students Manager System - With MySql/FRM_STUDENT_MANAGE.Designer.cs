@@ -31,16 +31,16 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -93,6 +93,18 @@
             this.panel1.Size = new System.Drawing.Size(705, 351);
             this.panel1.TabIndex = 9;
             // 
+            // dgvStudent
+            // 
+            this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStudent.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvStudent.Location = new System.Drawing.Point(14, 107);
+            this.dgvStudent.Name = "dgvStudent";
+            this.dgvStudent.ReadOnly = true;
+            this.dgvStudent.Size = new System.Drawing.Size(677, 241);
+            this.dgvStudent.TabIndex = 22;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -125,6 +137,16 @@
             this.label2.Size = new System.Drawing.Size(180, 25);
             this.label2.TabIndex = 20;
             this.label2.Text = "البحث عن طالب معين :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Students_Manager_System___With_MySql.Properties.Resources.App_Main_ico;
+            this.pictureBox1.Location = new System.Drawing.Point(445, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // btnExit
             // 
@@ -162,28 +184,7 @@
             this.btnEdit.TabIndex = 19;
             this.btnEdit.Text = "تعديل طالب";
             this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Students_Manager_System___With_MySql.Properties.Resources.App_Main_ico;
-            this.pictureBox1.Location = new System.Drawing.Point(445, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dgvStudent
-            // 
-            this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStudent.BackgroundColor = System.Drawing.Color.White;
-            this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudent.GridColor = System.Drawing.Color.White;
-            this.dgvStudent.Location = new System.Drawing.Point(14, 107);
-            this.dgvStudent.Name = "dgvStudent";
-            this.dgvStudent.ReadOnly = true;
-            this.dgvStudent.Size = new System.Drawing.Size(677, 241);
-            this.dgvStudent.TabIndex = 22;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // FRM_STUDENT_MANAGE
             // 
@@ -208,8 +209,8 @@
             this.Load += new System.EventHandler(this.FRM_STUDENT_MANAGE_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
