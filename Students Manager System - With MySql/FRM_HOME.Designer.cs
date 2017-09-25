@@ -112,6 +112,7 @@
             this.btnSMange.Name = "btnSMange";
             this.btnSMange.Size = new System.Drawing.Size(161, 22);
             this.btnSMange.Text = "ادارة الطلبة";
+            this.btnSMange.Click += new System.EventHandler(this.btnSMange_Click);
             // 
             // الموادوالدرجاتToolStripMenuItem
             // 

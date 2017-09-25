@@ -17,7 +17,7 @@ namespace Students_Manager_System___With_MySql
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new FRM_HOME());
 
         }
     }

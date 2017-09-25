@@ -19,7 +19,7 @@ namespace Students_Manager_System___With_MySql
 
         private void Home_Load(object sender, EventArgs e)
         {
-            notifyIcon.ShowBalloonTip(12);
+            //notifyIcon.ShowBalloonTip(12);
         }
 
 
@@ -36,11 +36,13 @@ namespace Students_Manager_System___With_MySql
             Application.OpenForms["MainForm"].Show();
             Close();
         }
+        
 
         // add new student button ..
         private void btnAddNewSt_Click(object sender, EventArgs e)
         {
             FRM_ADD_STUDETN FRM = new FRM_ADD_STUDETN();
+            FRM.MdiParent = this;
             FRM.Show();
         }
 
@@ -49,6 +51,13 @@ namespace Students_Manager_System___With_MySql
         private void FRM_HOME_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.OpenForms["MainForm"].Close();
+        }
+
+
+        // Manage Student Button
+        private void btnSMange_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
