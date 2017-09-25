@@ -1,6 +1,6 @@
 ﻿namespace Students_Manager_System___With_MySql
 {
-    partial class FRM_ADD_STUDETN
+    partial class FRM_ADD_STUDENT
     {
         /// <summary>
         /// Required designer variable.

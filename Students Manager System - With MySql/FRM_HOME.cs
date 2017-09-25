@@ -41,7 +41,7 @@ namespace Students_Manager_System___With_MySql
         // add new student button ..
         private void btnAddNewSt_Click(object sender, EventArgs e)
         {
-            FRM_ADD_STUDETN FRM = new FRM_ADD_STUDETN();
+            FRM_ADD_STUDENT FRM = new FRM_ADD_STUDENT();
             FRM.MdiParent = this;
             FRM.Show();
         }
@@ -57,7 +57,9 @@ namespace Students_Manager_System___With_MySql
         // Manage Student Button
         private void btnSMange_Click(object sender, EventArgs e)
         {
-
+            FRM_STUDENT_MANAGE FRM = new FRM_STUDENT_MANAGE();
+            FRM.MdiParent = this;
+            FRM.Show();
         }
     }
 }

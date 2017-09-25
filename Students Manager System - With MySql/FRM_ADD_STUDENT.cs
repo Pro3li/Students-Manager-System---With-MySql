@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace Students_Manager_System___With_MySql
 {
-    public partial class FRM_ADD_STUDETN : Form
+    public partial class FRM_ADD_STUDENT : Form
     {
-        public FRM_ADD_STUDETN()
+        public FRM_ADD_STUDENT()
         {
             InitializeComponent();
         }

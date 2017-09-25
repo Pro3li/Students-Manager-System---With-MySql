@@ -74,11 +74,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FRM_ADD_STUDETN.cs">
+    <Compile Include="FRM_ADD_STUDENT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_ADD_STUDETN.Designer.cs">
-      <DependentUpon>FRM_ADD_STUDETN.cs</DependentUpon>
+    <Compile Include="FRM_ADD_STUDENT.Designer.cs">
+      <DependentUpon>FRM_ADD_STUDENT.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_HOME.cs">
       <SubType>Form</SubType>
@@ -92,17 +92,26 @@
     <Compile Include="FRM_LOGIN.Designer.cs">
       <DependentUpon>FRM_LOGIN.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_STUDENT_MANAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_STUDENT_MANAGE.Designer.cs">
+      <DependentUpon>FRM_STUDENT_MANAGE.cs</DependentUpon>
+    </Compile>
     <Compile Include="tool.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FRM_ADD_STUDETN.resx">
-      <DependentUpon>FRM_ADD_STUDETN.cs</DependentUpon>
+    <EmbeddedResource Include="FRM_ADD_STUDENT.resx">
+      <DependentUpon>FRM_ADD_STUDENT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_HOME.resx">
       <DependentUpon>FRM_HOME.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_LOGIN.resx">
       <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_STUDENT_MANAGE.resx">
+      <DependentUpon>FRM_STUDENT_MANAGE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
