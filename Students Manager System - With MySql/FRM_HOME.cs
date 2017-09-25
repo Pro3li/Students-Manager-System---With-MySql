@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Students_Manager_System___With_MySql
 {
-    public partial class Home : Form
+    public partial class FRM_HOME : Form
     {
-        public Home()
+        public FRM_HOME()
         {
             InitializeComponent();
         }
@@ -20,13 +20,6 @@ namespace Students_Manager_System___With_MySql
         private void Home_Load(object sender, EventArgs e)
         {
             notifyIcon.ShowBalloonTip(12);
-        }
-
-
-        // when the form closed ..
-        private void Home_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.OpenForms["MainForm"].Close();
         }
 
 
@@ -42,6 +35,20 @@ namespace Students_Manager_System___With_MySql
         {
             Application.OpenForms["MainForm"].Show();
             Close();
+        }
+
+        // add new student button ..
+        private void btnAddNewSt_Click(object sender, EventArgs e)
+        {
+            FRM_ADD_STUDETN FRM = new FRM_ADD_STUDETN();
+            FRM.Show();
+        }
+
+
+        // when the form closed ..
+        private void FRM_HOME_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["MainForm"].Close();
         }
     }
 }

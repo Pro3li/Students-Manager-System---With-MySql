@@ -1,6 +1,6 @@
 ﻿namespace Students_Manager_System___With_MySql
 {
-    partial class Home
+    partial class FRM_HOME
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_HOME));
             this.menuStripTop = new System.Windows.Forms.MenuStrip();
             this.btFile = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSinOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.ادارةالطلبةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddNewSt = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSMange = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.اسمالحاسوبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.الوقتوالتاريحToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripTop.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.menuStripDown.SuspendLayout();
@@ -80,9 +80,16 @@
             // btnSinOut
             // 
             this.btnSinOut.Name = "btnSinOut";
-            this.btnSinOut.Size = new System.Drawing.Size(152, 22);
+            this.btnSinOut.Size = new System.Drawing.Size(142, 22);
             this.btnSinOut.Text = "تسجيل الخروج";
             this.btnSinOut.Click += new System.EventHandler(this.btnSinOut_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(142, 22);
+            this.btnClose.Text = "خروج";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ادارةالطلبةToolStripMenuItem
             // 
@@ -98,6 +105,7 @@
             this.btnAddNewSt.Name = "btnAddNewSt";
             this.btnAddNewSt.Size = new System.Drawing.Size(161, 22);
             this.btnAddNewSt.Text = "اضافة طالب جديد";
+            this.btnAddNewSt.Click += new System.EventHandler(this.btnAddNewSt_Click);
             // 
             // btnSMange
             // 
@@ -137,7 +145,7 @@
             // btnAbout
             // 
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(152, 22);
+            this.btnAbout.Size = new System.Drawing.Size(134, 22);
             this.btnAbout.Text = "حول البرنامج";
             // 
             // toolStrip
@@ -209,14 +217,7 @@
             this.notifyIcon.Text = "نظام ادارة الطلبة";
             this.notifyIcon.Visible = true;
             // 
-            // btnClose
-            // 
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(152, 22);
-            this.btnClose.Text = "خروج";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // Home
+            // FRM_HOME
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,12 +231,13 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripTop;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Home";
+            this.Name = "FRM_HOME";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "نظام ادارة الطَلبة";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_HOME_FormClosed);
             this.Load += new System.EventHandler(this.Home_Load);
             this.menuStripTop.ResumeLayout(false);
             this.menuStripTop.PerformLayout();

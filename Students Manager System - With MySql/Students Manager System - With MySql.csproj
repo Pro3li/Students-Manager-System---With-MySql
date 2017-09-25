@@ -74,25 +74,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home.cs">
+    <Compile Include="FRM_ADD_STUDETN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="FRM_ADD_STUDETN.Designer.cs">
+      <DependentUpon>FRM_ADD_STUDETN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login Form .cs">
+    <Compile Include="FRM_HOME.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login Form .Designer.cs">
-      <DependentUpon>Login Form .cs</DependentUpon>
+    <Compile Include="FRM_HOME.Designer.cs">
+      <DependentUpon>FRM_HOME.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tool.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="FRM_ADD_STUDETN.resx">
+      <DependentUpon>FRM_ADD_STUDETN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login Form .resx">
-      <DependentUpon>Login Form .cs</DependentUpon>
+    <EmbeddedResource Include="FRM_HOME.resx">
+      <DependentUpon>FRM_HOME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

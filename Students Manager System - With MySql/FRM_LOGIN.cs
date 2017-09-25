@@ -7,17 +7,6 @@ namespace Students_Manager_System___With_MySql
 {
     public partial class MainForm : Form
     {
-        // connection 
-        MySqlConnection _MySqlCon = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["MySqlCon"].ConnectionString);
-
-
-        // MySql DataReader .. 
-        MySqlDataAdapter _Adapter;
-
-
-        // Table ..
-        DataTable _Table = new DataTable();
-
 
         // Constractor .. 
         public MainForm()
@@ -40,8 +29,8 @@ namespace Students_Manager_System___With_MySql
             {
                 try
                 {
-                    _Table.Clear();
-                    _Adapter = new MySqlDataAdapter("SELECT * FROM tbl_users WHERE username = @User AND password = @Pass", _MySqlCon);
+                    
+                    tool.Adapter = new MySqlDataAdapter("SELECT * FROM tbl_users WHERE username = @User AND password = @Pass", tool.MySqlCon);
 
                     // using MySql Parameter 
                     MySqlParameter[] _Parm = new MySqlParameter[2];
@@ -51,11 +40,14 @@ namespace Students_Manager_System___With_MySql
                     _Parm[1].Value = txtPassword.Text;
 
                     // add parameter to command ..
-                    _Adapter.SelectCommand.Parameters.AddRange(_Parm);
+                    tool.Adapter.SelectCommand.Parameters.AddRange(_Parm);
 
-                    _Adapter.Fill(_Table);
+                    // new instance 
+                    tool.Table = new DataTable();
 
-                    if (_Table.Rows.Count > 0)
+                    tool.Adapter.Fill(tool.Table);
+
+                    if (tool.Table.Rows.Count > 0)
                     {
                         MessageBox.Show("تم تسجيل الدخول بنجاح ، اهلا وسهلا بك"
                                      , "تسجيل الدخول "
@@ -68,7 +60,7 @@ namespace Students_Manager_System___With_MySql
                         txtPassword.Clear();
 
                         this.Hide();
-                        Home FRM_HOME = new Home();
+                        FRM_HOME FRM_HOME = new FRM_HOME();
                         FRM_HOME.Show();
                     }
                     else
@@ -106,5 +98,7 @@ namespace Students_Manager_System___With_MySql
         {
             Application.Exit();
         }
+
+
     }
 }
