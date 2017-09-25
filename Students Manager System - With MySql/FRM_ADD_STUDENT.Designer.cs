@@ -37,7 +37,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLogoText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cocon® Next Arabic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label2.Location = new System.Drawing.Point(268, 203);
+            this.label2.Location = new System.Drawing.Point(265, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 25);
             this.label2.TabIndex = 5;
@@ -97,7 +97,7 @@
             this.txtName.BackColor = System.Drawing.SystemColors.Window;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtName.Location = new System.Drawing.Point(37, 203);
+            this.txtName.Location = new System.Drawing.Point(34, 203);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(225, 26);
             this.txtName.TabIndex = 0;
@@ -107,7 +107,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cocon® Next Arabic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label5.Location = new System.Drawing.Point(268, 244);
+            this.label5.Location = new System.Drawing.Point(265, 244);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 25);
             this.label5.TabIndex = 9;
@@ -118,7 +118,7 @@
             this.txtAddress.BackColor = System.Drawing.SystemColors.Window;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtAddress.Location = new System.Drawing.Point(37, 244);
+            this.txtAddress.Location = new System.Drawing.Point(34, 244);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(225, 26);
             this.txtAddress.TabIndex = 1;
@@ -128,7 +128,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cocon® Next Arabic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label7.Location = new System.Drawing.Point(268, 285);
+            this.label7.Location = new System.Drawing.Point(265, 285);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 25);
             this.label7.TabIndex = 12;
@@ -137,7 +137,7 @@
             // dtBirthDate
             // 
             this.dtBirthDate.Font = new System.Drawing.Font("Arial", 10F);
-            this.dtBirthDate.Location = new System.Drawing.Point(37, 285);
+            this.dtBirthDate.Location = new System.Drawing.Point(34, 285);
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(225, 23);
             this.dtBirthDate.TabIndex = 2;
@@ -145,28 +145,28 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Students_Manager_System___With_MySql.Properties.Resources.App_Main_ico;
-            this.pictureBox1.Location = new System.Drawing.Point(144, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(142, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblLogoText
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))), ((int)(((byte)(212)))));
-            this.label1.Font = new System.Drawing.Font("Cocon® Next Arabic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(112, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 36);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "اضافة طالب جديد";
+            this.lblLogoText.AutoSize = true;
+            this.lblLogoText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))), ((int)(((byte)(212)))));
+            this.lblLogoText.Font = new System.Drawing.Font("Cocon® Next Arabic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblLogoText.ForeColor = System.Drawing.Color.White;
+            this.lblLogoText.Location = new System.Drawing.Point(109, 142);
+            this.lblLogoText.Name = "lblLogoText";
+            this.lblLogoText.Size = new System.Drawing.Size(195, 36);
+            this.lblLogoText.TabIndex = 4;
+            this.lblLogoText.Text = "اضافة طالب جديد";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblLogoText);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dtBirthDate);
             this.panel1.Controls.Add(this.label7);
@@ -191,6 +191,7 @@
             this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FRM_ADD_STUDENT";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -210,11 +211,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnAdd;
         public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.TextBox txtAddress;
         public System.Windows.Forms.DateTimePicker dtBirthDate;
+        public System.Windows.Forms.Label lblLogoText;
     }
 }

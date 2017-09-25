@@ -30,7 +30,7 @@ namespace Students_Manager_System___With_MySql
                 try
                 {
                     
-                    tool.Adapter = new MySqlDataAdapter("SELECT * FROM tbl_users WHERE username = @User AND password = @Pass", tool.MySqlCon);
+                    Tool.Adapter = new MySqlDataAdapter("SELECT * FROM tbl_users WHERE username = @User AND password = @Pass", Tool.MySqlCon);
 
                     // using MySql Parameter 
                     MySqlParameter[] _Parm = new MySqlParameter[2];
@@ -40,14 +40,14 @@ namespace Students_Manager_System___With_MySql
                     _Parm[1].Value = txtPassword.Text;
 
                     // add parameter to command ..
-                    tool.Adapter.SelectCommand.Parameters.AddRange(_Parm);
+                    Tool.Adapter.SelectCommand.Parameters.AddRange(_Parm);
 
                     // new instance 
-                    tool.Table = new DataTable();
+                    Tool.Table = new DataTable();
 
-                    tool.Adapter.Fill(tool.Table);
+                    Tool.Adapter.Fill(Tool.Table);
 
-                    if (tool.Table.Rows.Count > 0)
+                    if (Tool.Table.Rows.Count > 0)
                     {
                         MessageBox.Show("تم تسجيل الدخول بنجاح ، اهلا وسهلا بك"
                                      , "تسجيل الدخول "
@@ -99,6 +99,9 @@ namespace Students_Manager_System___With_MySql
             Application.Exit();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -146,8 +146,9 @@
             // btnAbout
             // 
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(134, 22);
+            this.btnAbout.Size = new System.Drawing.Size(152, 22);
             this.btnAbout.Text = "حول البرنامج";
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // toolStrip
             // 

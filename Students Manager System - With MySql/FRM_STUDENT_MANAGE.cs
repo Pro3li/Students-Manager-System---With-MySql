@@ -49,10 +49,10 @@ namespace Students_Manager_System___With_MySql
         // fill DGV ...
         void fillDGVStudent()
         {
-            tool.Adapter = new MySqlDataAdapter("SELECT * FROM tbl_student", tool.MySqlCon);
-            tool.Table = new DataTable();
-            tool.Adapter.Fill(tool.Table);
-            dgvStudent.DataSource = tool.Table;
+            Tool.Adapter = new MySqlDataAdapter("SELECT * FROM tbl_student", Tool.MySqlCon);
+            Tool.Table = new DataTable();
+            Tool.Adapter.Fill(Tool.Table);
+            dgvStudent.DataSource = Tool.Table;
             
         }
 
@@ -73,7 +73,7 @@ namespace Students_Manager_System___With_MySql
         {
             try
             {
-                Dview = tool.Table.DefaultView;
+                Dview = Tool.Table.DefaultView;
                 Dview.RowFilter = "Name+Addres LIKE '%" + txtSearch.Text + "%'";
                 dgvStudent.DataSource = Dview;
             }
@@ -98,9 +98,9 @@ namespace Students_Manager_System___With_MySql
                    )
                 {
                     string Query = "DELETE FROM `tbl_student` WHERE `tbl_student`.`ID` = " + dgvStudent.CurrentRow.Cells[0].Value;
-                    tool.Command = new MySqlCommand(Query, tool.MySqlCon);
-                    tool.Connect();   // open
-                    tool.Command.ExecuteNonQuery();
+                    Tool.Command = new MySqlCommand(Query, Tool.MySqlCon);
+                    Tool.Connect();   // open
+                    Tool.Command.ExecuteNonQuery();
 
                     // Update
                     fillDGVStudent();
@@ -117,7 +117,7 @@ namespace Students_Manager_System___With_MySql
             }
             finally
             {
-                tool.DisConnect();  // close connection 
+                Tool.DisConnect();  // close connection 
             }
 
                 
@@ -137,11 +137,14 @@ namespace Students_Manager_System___With_MySql
             // Edit some thing .. 
             FRM.Choise = "Edit"; 
             FRM.Student_ID = dgvStudent.CurrentRow.Cells[0].Value.ToString();
+
+            FRM.btnAdd.Text = "تعديل";
+            FRM.lblLogoText.Text = "تعديل احد الطلاب";
             FRM.Text = "تعديل الطالب : " + dgvStudent.CurrentRow.Cells[1].Value.ToString();
             FRM.txtName.Text = dgvStudent.CurrentRow.Cells[1].Value.ToString();
             FRM.txtAddress.Text = dgvStudent.CurrentRow.Cells[2].Value.ToString();
             FRM.dtBirthDate.Value = Convert.ToDateTime(dgvStudent.CurrentRow.Cells[3].Value.ToString());
-            FRM.btnAdd.Text = "تعديل";
+            
 
 
             FRM.ShowDialog();

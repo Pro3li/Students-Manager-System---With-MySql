@@ -200,6 +200,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEdit);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FRM_STUDENT_MANAGE";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

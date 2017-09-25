@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Students_Manager_System___With_MySql
 {
-    class tool
+    class Tool
     {
 
         // connection 

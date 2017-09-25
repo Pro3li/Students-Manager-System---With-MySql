@@ -42,28 +42,40 @@ namespace Students_Manager_System___With_MySql
 
             try
             {
-                tool.Command = new MySqlCommand( Query , tool.MySqlCon);
-                MySqlParameter[] Parm = new MySqlParameter[3];
+                if ( txtName.Text.Trim() != "" && txtAddress.Text.Trim() != "")
+                {
+                    Tool.Command = new MySqlCommand(Query, Tool.MySqlCon);
+                    MySqlParameter[] Parm = new MySqlParameter[3];
 
-                Parm[0] = new MySqlParameter("@Name", MySqlDbType.VarChar, 50);
-                Parm[1] = new MySqlParameter("@Address", MySqlDbType.VarChar, 100);
-                Parm[2] = new MySqlParameter("@Date", MySqlDbType.Date);
+                    Parm[0] = new MySqlParameter("@Name", MySqlDbType.VarChar, 50);
+                    Parm[1] = new MySqlParameter("@Address", MySqlDbType.VarChar, 100);
+                    Parm[2] = new MySqlParameter("@Date", MySqlDbType.Date);
 
-                Parm[0].Value = txtName.Text;
-                Parm[1].Value = txtAddress.Text;
-                Parm[2].Value = dtBirthDate.Value.Date;
+                    Parm[0].Value = txtName.Text;
+                    Parm[1].Value = txtAddress.Text;
+                    Parm[2].Value = dtBirthDate.Value.Date;
 
-                tool.Command.Parameters.AddRange(Parm);
+                    Tool.Command.Parameters.AddRange(Parm);
 
-                tool.MySqlCon.Open();
+                    Tool.MySqlCon.Open();
 
-                tool.Command.ExecuteNonQuery();
+                    Tool.Command.ExecuteNonQuery();
 
-                MessageBox.Show(    "تمت العملية بنجاح"
-                                     , "ادارة الطلاب"
-                                     , MessageBoxButtons.OK
-                                     , MessageBoxIcon.Information
-                                );
+                    MessageBox.Show("تمت العملية بنجاح"
+                                         , "ادارة الطلاب"
+                                         , MessageBoxButtons.OK
+                                         , MessageBoxIcon.Information
+                                    ); 
+                }
+                else
+                {
+                    MessageBox.Show(     "لايمكن ترك احد الحقول فارغاً"
+                                         , "ادارة الطلاب"
+                                         , MessageBoxButtons.OK
+                                         , MessageBoxIcon.Warning
+                                    );
+
+                }
             }
             catch ( Exception ex )
             {
@@ -75,7 +87,7 @@ namespace Students_Manager_System___With_MySql
             }
             finally
             {
-                tool.MySqlCon.Close();
+                Tool.MySqlCon.Close();
             }
 
 

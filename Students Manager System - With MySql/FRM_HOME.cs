@@ -86,5 +86,11 @@ namespace Students_Manager_System___With_MySql
             FRM.MdiParent = this;
             FRM.Show();
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            FRM_ABOUT FRM = new FRM_ABOUT();
+            FRM.ShowDialog();
+        }
     }
 }
