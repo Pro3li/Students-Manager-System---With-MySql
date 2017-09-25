@@ -20,11 +20,12 @@ namespace Students_Manager_System___With_MySql
 
 
         // Table ..
-        static public DataTable Table;
+        static public DataTable Table = new DataTable();
 
 
         // MySql Command ..
         static public MySqlCommand Command;
+
 
     }
 }

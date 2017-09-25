@@ -12,14 +12,25 @@ namespace Students_Manager_System___With_MySql
 {
     public partial class FRM_HOME : Form
     {
+
+        // constractor ..
         public FRM_HOME()
         {
             InitializeComponent();
         }
 
+
+        // Form Load
         private void Home_Load(object sender, EventArgs e)
         {
+            // notifcation on load ..
             //notifyIcon.ShowBalloonTip(12);
+
+            // Date Time 
+            lblDate.Text += " " + DateTime.Now.ToString();
+
+            // computer name
+            lblComputer.Text += " " + System.Environment.UserName;
         }
 
 
@@ -56,6 +67,20 @@ namespace Students_Manager_System___With_MySql
 
         // Manage Student Button
         private void btnSMange_Click(object sender, EventArgs e)
+        {
+            StudentMangeForm();
+        }
+
+       
+        // Student Manage button ShortCat
+        private void btnStudentMange_Click(object sender, EventArgs e)
+        {
+            StudentMangeForm();
+        }
+
+
+        // call Student Mange Form
+        private void StudentMangeForm()
         {
             FRM_STUDENT_MANAGE FRM = new FRM_STUDENT_MANAGE();
             FRM.MdiParent = this;

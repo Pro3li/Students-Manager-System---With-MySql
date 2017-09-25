@@ -38,9 +38,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
-            this.SName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
@@ -82,6 +79,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "حذف طالب";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel1
             // 
@@ -115,6 +113,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(445, 26);
             this.txtSearch.TabIndex = 16;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label2
             // 
@@ -179,35 +178,20 @@
             this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudent.BackgroundColor = System.Drawing.Color.White;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SName,
-            this.SAddress,
-            this.SDate});
+            this.dgvStudent.GridColor = System.Drawing.Color.White;
             this.dgvStudent.Location = new System.Drawing.Point(14, 107);
             this.dgvStudent.Name = "dgvStudent";
+            this.dgvStudent.ReadOnly = true;
             this.dgvStudent.Size = new System.Drawing.Size(677, 241);
             this.dgvStudent.TabIndex = 22;
             // 
-            // SName
-            // 
-            this.SName.HeaderText = "اسم الطالب";
-            this.SName.Name = "SName";
-            // 
-            // SAddress
-            // 
-            this.SAddress.HeaderText = "عنوان الطالب";
-            this.SAddress.Name = "SAddress";
-            // 
-            // SDate
-            // 
-            this.SDate.HeaderText = "تاريخ الميلاد";
-            this.SDate.Name = "SDate";
-            // 
             // FRM_STUDENT_MANAGE
             // 
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(729, 427);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDelete);
@@ -219,8 +203,9 @@
             this.Name = "FRM_STUDENT_MANAGE";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "شاشة ادارة الطلبة";
+            this.Load += new System.EventHandler(this.FRM_STUDENT_MANAGE_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -235,9 +220,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvStudent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label2;
