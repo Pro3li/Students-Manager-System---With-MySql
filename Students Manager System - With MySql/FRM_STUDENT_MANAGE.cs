@@ -156,5 +156,9 @@ namespace Students_Manager_System___With_MySql
             fillDGVStudent();
         }
 
+        private void picExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
