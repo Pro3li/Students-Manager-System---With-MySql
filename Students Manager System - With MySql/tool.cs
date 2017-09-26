@@ -26,6 +26,11 @@ namespace Students_Manager_System___With_MySql
         // MySql Command ..
         static public MySqlCommand Command;
 
+
+        // MySql Command Builder
+        static public MySqlCommandBuilder Builder;
+
+
         // connect
         public static void Connect()
         {

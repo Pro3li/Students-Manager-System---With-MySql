@@ -13,6 +13,7 @@ namespace Students_Manager_System___With_MySql
 {
     public partial class FRM_STUDENT_MANAGE : Form
     {
+
         // Data View For filtering
         DataView Dview = new DataView();
 
@@ -23,6 +24,7 @@ namespace Students_Manager_System___With_MySql
             InitializeComponent();
         }
 
+
         // add student 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -30,6 +32,7 @@ namespace Students_Manager_System___With_MySql
             FRM.ShowDialog();
             fillDGVStudent();
         }
+
 
         // close
         private void btnExit_Click(object sender, EventArgs e)
@@ -68,6 +71,7 @@ namespace Students_Manager_System___With_MySql
             dgvStudent.Columns[3].HeaderText = "تاريخ الميلاد";
         }
 
+
         // Search Function ...
         void Serach()
         {
@@ -83,6 +87,7 @@ namespace Students_Manager_System___With_MySql
                 return;
             }
         }
+
 
         // Delete Student
         private void btnDelete_Click(object sender, EventArgs e)
@@ -130,6 +135,8 @@ namespace Students_Manager_System___With_MySql
             Serach();
         }
 
+
+        // Edit Operation
         private void btnEdit_Click(object sender, EventArgs e)
         {
             FRM_ADD_STUDENT FRM = new FRM_ADD_STUDENT();
@@ -145,8 +152,6 @@ namespace Students_Manager_System___With_MySql
             FRM.txtAddress.Text = dgvStudent.CurrentRow.Cells[2].Value.ToString();
             FRM.dtBirthDate.Value = Convert.ToDateTime(dgvStudent.CurrentRow.Cells[3].Value.ToString());
             
-
-
             FRM.ShowDialog();
             fillDGVStudent();
         }

@@ -92,5 +92,28 @@ namespace Students_Manager_System___With_MySql
             FRM_ABOUT FRM = new FRM_ABOUT();
             FRM.ShowDialog();
         }
+
+
+        // manage cources button 
+        private void btnCourceM_Click(object sender, EventArgs e)
+        {
+            OpenMCourcesForm();
+        }
+
+
+        // manage cources form open function
+        private void OpenMCourcesForm()
+        {
+            FRM_COURCES FRM = new FRM_COURCES();
+            FRM.MdiParent = this;
+            FRM.Show();
+        }
+
+
+        // manage cources shortcat ..
+        private void btnCourcesMange_Click(object sender, EventArgs e)
+        {
+            OpenMCourcesForm();
+        }
     }
 }

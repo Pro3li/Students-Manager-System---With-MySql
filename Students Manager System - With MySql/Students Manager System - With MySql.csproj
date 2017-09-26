@@ -86,6 +86,12 @@
     <Compile Include="FRM_ADD_STUDENT.Designer.cs">
       <DependentUpon>FRM_ADD_STUDENT.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_COURCES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_COURCES.Designer.cs">
+      <DependentUpon>FRM_COURCES.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_HOME.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_ADD_STUDENT.resx">
       <DependentUpon>FRM_ADD_STUDENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_COURCES.resx">
+      <DependentUpon>FRM_COURCES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_HOME.resx">
       <DependentUpon>FRM_HOME.cs</DependentUpon>
@@ -159,6 +168,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bookshelf.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -128,6 +128,7 @@
             this.btnCourceM.Name = "btnCourceM";
             this.btnCourceM.Size = new System.Drawing.Size(171, 22);
             this.btnCourceM.Text = "ادارة المواد الدراسية";
+            this.btnCourceM.Click += new System.EventHandler(this.btnCourceM_Click);
             // 
             // btnMarks
             // 
@@ -146,7 +147,7 @@
             // btnAbout
             // 
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(152, 22);
+            this.btnAbout.Size = new System.Drawing.Size(134, 22);
             this.btnAbout.Text = "حول البرنامج";
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
@@ -178,6 +179,7 @@
             this.btnCourcesMange.Name = "btnCourcesMange";
             this.btnCourcesMange.Size = new System.Drawing.Size(124, 22);
             this.btnCourcesMange.Text = "ادارة المواد الدراسية";
+            this.btnCourcesMange.Click += new System.EventHandler(this.btnCourcesMange_Click);
             // 
             // btnMarksMange
             // 
