@@ -46,13 +46,14 @@
             this.btnStudentMange = new System.Windows.Forms.ToolStripButton();
             this.btnCourcesMange = new System.Windows.Forms.ToolStripButton();
             this.btnMarksMange = new System.Windows.Forms.ToolStripButton();
-            this.menuStripDown = new System.Windows.Forms.MenuStrip();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblComputer = new System.Windows.Forms.ToolStripMenuItem();
             this.lblDate = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.lblDateTime = new System.Windows.Forms.MenuStrip();
             this.menuStripTop.SuspendLayout();
             this.toolStrip.SuspendLayout();
-            this.menuStripDown.SuspendLayout();
+            this.lblDateTime.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripTop
@@ -79,6 +80,7 @@
             // 
             // btnSinOut
             // 
+            this.btnSinOut.Enabled = false;
             this.btnSinOut.Name = "btnSinOut";
             this.btnSinOut.Size = new System.Drawing.Size(142, 22);
             this.btnSinOut.Text = "تسجيل الخروج";
@@ -135,6 +137,7 @@
             this.btnMarks.Name = "btnMarks";
             this.btnMarks.Size = new System.Drawing.Size(171, 22);
             this.btnMarks.Text = "الدرجات";
+            this.btnMarks.Click += new System.EventHandler(this.btnMarks_Click);
             // 
             // مساعدةToolStripMenuItem
             // 
@@ -188,30 +191,7 @@
             this.btnMarksMange.Name = "btnMarksMange";
             this.btnMarksMange.Size = new System.Drawing.Size(91, 22);
             this.btnMarksMange.Text = "ادارة الدرجات";
-            // 
-            // menuStripDown
-            // 
-            this.menuStripDown.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuStripDown.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblComputer,
-            this.lblDate});
-            this.menuStripDown.Location = new System.Drawing.Point(0, 434);
-            this.menuStripDown.Name = "menuStripDown";
-            this.menuStripDown.Size = new System.Drawing.Size(754, 24);
-            this.menuStripDown.TabIndex = 2;
-            this.menuStripDown.Text = "menuStrip2";
-            // 
-            // lblComputer
-            // 
-            this.lblComputer.Name = "lblComputer";
-            this.lblComputer.Size = new System.Drawing.Size(92, 20);
-            this.lblComputer.Text = "اسم الحاسوب :";
-            // 
-            // lblDate
-            // 
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(98, 20);
-            this.lblDate.Text = "الوقت و التاريح :";
+            this.btnMarksMange.Click += new System.EventHandler(this.btnMarksMange_Click);
             // 
             // notifyIcon
             // 
@@ -222,6 +202,35 @@
             this.notifyIcon.Text = "نظام ادارة الطلبة";
             this.notifyIcon.Visible = true;
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // lblComputer
+            // 
+            this.lblComputer.Name = "lblComputer";
+            this.lblComputer.Size = new System.Drawing.Size(92, 20);
+            this.lblComputer.Text = "اسم الحاسوب :";
+            // 
+            // lblDate
+            // 
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(12, 20);
+            // 
+            // lblDateTime
+            // 
+            this.lblDateTime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblDateTime.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblComputer,
+            this.lblDate});
+            this.lblDateTime.Location = new System.Drawing.Point(0, 434);
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.Size = new System.Drawing.Size(754, 24);
+            this.lblDateTime.TabIndex = 2;
+            this.lblDateTime.Text = "    ";
+            // 
             // FRM_HOME
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -230,7 +239,7 @@
             this.ClientSize = new System.Drawing.Size(754, 458);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStripTop);
-            this.Controls.Add(this.menuStripDown);
+            this.Controls.Add(this.lblDateTime);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
@@ -248,8 +257,8 @@
             this.menuStripTop.PerformLayout();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
-            this.menuStripDown.ResumeLayout(false);
-            this.menuStripDown.PerformLayout();
+            this.lblDateTime.ResumeLayout(false);
+            this.lblDateTime.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,10 +281,11 @@
         private System.Windows.Forms.ToolStripButton btnStudentMange;
         private System.Windows.Forms.ToolStripButton btnCourcesMange;
         private System.Windows.Forms.ToolStripButton btnMarksMange;
-        private System.Windows.Forms.MenuStrip menuStripDown;
-        private System.Windows.Forms.ToolStripMenuItem lblComputer;
-        private System.Windows.Forms.ToolStripMenuItem lblDate;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem btnClose;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ToolStripMenuItem lblComputer;
+        private System.Windows.Forms.ToolStripMenuItem lblDate;
+        private System.Windows.Forms.MenuStrip lblDateTime;
     }
 }

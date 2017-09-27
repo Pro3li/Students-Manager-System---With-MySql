@@ -104,6 +104,12 @@
     <Compile Include="FRM_LOGIN.Designer.cs">
       <DependentUpon>FRM_LOGIN.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_MARKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MARKS.Designer.cs">
+      <DependentUpon>FRM_MARKS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_STUDENT_MANAGE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_LOGIN.resx">
       <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MARKS.resx">
+      <DependentUpon>FRM_MARKS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_STUDENT_MANAGE.resx">
       <DependentUpon>FRM_STUDENT_MANAGE.cs</DependentUpon>
@@ -174,6 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\check-mark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

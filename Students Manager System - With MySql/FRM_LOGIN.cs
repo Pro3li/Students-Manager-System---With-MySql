@@ -61,7 +61,7 @@ namespace Students_Manager_System___With_MySql
 
                         this.Hide();
                         FRM_HOME FRM_HOME = new FRM_HOME();
-                        FRM_HOME.Show();
+                        FRM_HOME.Show(); 
                     }
                     else
                     {
